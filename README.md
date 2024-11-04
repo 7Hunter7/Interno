@@ -1,35 +1,16 @@
-# vue-project
 
-This template should help get you started developing with Vue 3 in Vite.
+# Приложение интернет-магазина
 
-## Recommended IDE Setup
+## Компоненты:
++ "ProductDetails" - отображает детали о конкретном продукте, включая его название, цену и статус доступности.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+В "ProductDetails" есть свойство "product" с объектом, представляющим информацию о продукте. Объект имеет свойства "name" (название продукта), "price" (цена продукта) и "available" (флаг, указывающий на доступность продукта).
 
-## Customize configuration
+Вычисляемое свойство "formattedPrice", возвращает форматированную цену продукта со знаком валюты. Например, если цена равна 99.99, вычисляемое свойство должно вернуть строку "$99.99".
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+В компоненте "ProductDetails" отображены:
++ название продукта,
++ его форматированная цена.
++ статус доступности.
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Если продукт доступен, отобразите текст "Available", в противном случае - "Out of stock".
